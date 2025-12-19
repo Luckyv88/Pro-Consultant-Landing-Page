@@ -25,7 +25,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="logo">
         <a href="#home" onClick={(e) => handleScroll(e, 'home')} className="logo-link">
-          MyCompany
+          🛡️Trust
         </a>
       </div>
       <ul>
