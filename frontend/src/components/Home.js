@@ -8,7 +8,7 @@ const Home = () => {
     <>
       <section className="home-hero">
         <img
-          src="http://localhost:5000/uploads/home.jpg"
+          src="https://pro-consultant-landing-page-backend.onrender.com/uploads/home.jpg"
           alt="Consultation"
           className="hero-bg"
         />
