@@ -9,7 +9,7 @@ const Project = () => {
     const fetchProjects = async () => {
       try {
         // Fetching from your backend route
-        const res = await axios.get('http://localhost:5000/api/projects');
+        const res = await axios.get('https://pro-consultant-landing-page-backend.onrender.com/api/projects');
         setProjects(res.data);
       } catch (err) {
         console.error("Error fetching projects", err);
@@ -39,7 +39,7 @@ const Project = () => {
               <div className="project-image-box">
                 {/* Fixed path to reach your backend uploads folder */}
                 <img 
-                  src={`http://localhost:5000${proj.image}`} 
+                  src={`https://pro-consultant-landing-page-backend.onrender.com${proj.image}`} 
                   alt={proj.name} 
                 />
               </div>
