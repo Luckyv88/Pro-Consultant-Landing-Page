@@ -54,7 +54,7 @@ const ChooseUs = () => {
               custom={1} initial="hidden" whileInView="visible" variants={imageVariants}
             >
              <img
-          src="http://localhost:5000/uploads/chooseus1.jpg"
+          src="https://pro-consultant-landing-page-backend.onrender.com/uploads/chooseus1.jpg"
           alt="Consultation"
           className="hero-bg"
         />
@@ -65,7 +65,7 @@ const ChooseUs = () => {
               custom={2} initial="hidden" whileInView="visible" variants={imageVariants}
             >
              <img
-          src="http://localhost:5000/uploads/chooseus2.jpg"
+          src="https://pro-consultant-landing-page-backend.onrender.com/uploads/chooseus2.jpg"
           alt="Consultation"
           className="hero-bg"
         />
@@ -76,7 +76,7 @@ const ChooseUs = () => {
               custom={3} initial="hidden" whileInView="visible" variants={imageVariants}
             >
              <img
-          src="http://localhost:5000/uploads/chooseus3.jpg"
+          src="https://pro-consultant-landing-page-backend.onrender.com/uploads/chooseus3.jpg"
           alt="Consultation"
           className="hero-bg"
         />
