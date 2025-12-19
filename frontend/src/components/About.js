@@ -17,21 +17,21 @@ const About = () => {
           <div className="image-grid-container">
             <div className="side-img-wrapper left-img">
               <div className="img-frame">
-                <img src="http://localhost:5000/uploads/aboutus2.png" alt="Agent" />
+                <img src="https://pro-consultant-landing-page-backend.onrender.com/uploads/aboutus2.png" alt="Agent" />
               </div>
               <div className="bracket bracket-orange-bottom-left"></div>
             </div>
 
             <div className="main-img-wrapper">
               <div className="img-frame-large">
-                <img src="http://localhost:5000/uploads/aboutus1.jpg" alt="Agent" />
+                <img src="https://pro-consultant-landing-page-backend.onrender.com/uploads/aboutus1.jpg" alt="Agent" />
               </div>
               <div className="bracket bracket-blue-top-left"></div>
             </div>
 
             <div className="side-img-wrapper right-img">
               <div className="img-frame">
-                <img src="http://localhost:5000/uploads/aboutus3.jpg" alt="Agent" />
+                <img src="https://pro-consultant-landing-page-backend.onrender.com/aboutus3.jpg" alt="Agent" />
               </div>
               <div className="bracket bracket-blue-top-right"></div>
             </div>
