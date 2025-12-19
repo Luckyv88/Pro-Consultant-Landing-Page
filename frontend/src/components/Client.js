@@ -8,7 +8,7 @@ const Client = () => {
   useEffect(() => {
     const fetchClients = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/clients');
+        const res = await axios.get('https://pro-consultant-landing-page-backend.onrender.com/api/clients');
         setClients(res.data);
       } catch (err) {
         console.error("Error fetching clients", err);
@@ -34,7 +34,7 @@ const Client = () => {
                 <div className="client-avatar-container">
                   <div className="blue-circle-border">
                     <img 
-                      src={`http://localhost:5000${client.image}`} 
+                      src={`https://pro-consultant-landing-page-backend.onrender.com${client.image}`} 
                       alt={client.name} 
                     />
                   </div>
