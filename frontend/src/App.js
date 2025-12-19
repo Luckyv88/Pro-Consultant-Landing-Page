@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import Home from './components/Home';
@@ -15,7 +15,6 @@ function App() {
   return (
     <Router>
       <Routes>
-
         {/* MAIN WEBSITE */}
         <Route
           path="/"
@@ -36,7 +35,6 @@ function App() {
 
         {/* ADMIN DASHBOARD */}
         <Route path="/admindashboard" element={<AdminDashboard />} />
-
       </Routes>
     </Router>
   );
