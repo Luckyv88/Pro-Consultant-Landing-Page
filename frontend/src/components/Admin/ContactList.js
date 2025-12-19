@@ -5,7 +5,7 @@ const ContactList = () => {
   const [contacts, setContacts] = useState([])
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/contact')
+    axios.get('https://pro-consultant-landing-page-backend.onrender.com/api/contact')
       .then(res => setContacts(res.data))
   }, [])
 
