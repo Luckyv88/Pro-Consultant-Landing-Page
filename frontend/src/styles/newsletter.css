@@ -1,0 +1,213 @@
+.newsletter-section {
+  position: relative;
+  width: 100%;
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #333; /* Fallback color */
+}
+
+/* Background Image Handling */
+.newsletter-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.newsletter-bg-overlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6; /* Makes the text readable against the image */
+}
+
+.newsletter-container {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  padding: 0 20px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.newsletter-title {
+  color: #ffffff; /* White text looks best on dark background images */
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.newsletter-underline {
+  width: 80px;
+  height: 4px;
+  background-color: #e67e22; /* Brand Orange */
+  margin: 0 auto 40px;
+  border-radius: 2px;
+}
+
+/* Form Layout */
+.newsletter-form {
+  width: 100%;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  align-items: stretch; /* Forces children to be same height */
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 15px 25px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box; /* Ensures padding doesn't add to height */
+  height: 55px; /* Explicit height to match button */
+}
+
+.newsletter-submit-btn {
+  background-color: #3b71ca; /* Brand Blue */
+  color: white;
+  border: none;
+  padding: 0 35px; /* Vertical padding removed to use height */
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  letter-spacing: 1px;
+  box-sizing: border-box;
+  height: 55px; /* Matches the input height exactly */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.newsletter-submit-btn:hover {
+  background-color: #e67e22; /* Hover to Orange */
+  transform: translateY(-2px);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+  .input-group {
+    flex-direction: column;
+  }
+  .newsletter-submit-btn {
+    width: 100%;
+  }
+}
+
+/* Responsive for laptops & small desktops */
+@media (max-width: 1200px) and (min-width: 1025px) {
+  .newsletter-section {
+    padding: 90px 0;
+  }
+  .newsletter-title {
+    font-size: 30px;
+  }
+  .newsletter-container {
+    max-width: 760px;
+  }
+}
+
+/* Responsive for tablets */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .newsletter-section {
+    padding: 80px 0;
+  }
+  .newsletter-title {
+    font-size: 28px;
+  }
+  .newsletter-input {
+    font-size: 15px;
+    padding: 14px 22px;
+  }
+  .newsletter-submit-btn {
+    font-size: 13.5px;
+    padding: 0 30px;
+  }
+}
+
+/* Responsive for small tablets */
+@media (max-width: 768px) and (min-width: 601px) {
+  .newsletter-section {
+    padding: 70px 0;
+  }
+  .newsletter-title {
+    font-size: 26px;
+  }
+  .newsletter-underline {
+    margin-bottom: 30px;
+  }
+  .input-group {
+    max-width: 100%;
+  }
+}
+
+/* Responsive for mobile devices */
+@media (max-width: 480px) {
+  .newsletter-section {
+    padding: 60px 0;
+  }
+  .newsletter-title {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+  .newsletter-input {
+    font-size: 14px;
+    padding: 13px 18px;
+    height: 50px;
+  }
+  .newsletter-submit-btn {
+    font-size: 13px;
+    height: 50px;
+    letter-spacing: 0.5px;
+  }
+}
+
+/* Responsive for very large screens */
+@media (min-width: 1440px) {
+  .newsletter-section {
+    padding: 120px 0;
+  }
+  .newsletter-title {
+    font-size: 36px;
+  }
+  .newsletter-container {
+    max-width: 900px;
+  }
+  .newsletter-input {
+    font-size: 17px;
+  }
+  .newsletter-submit-btn {
+    font-size: 15px;
+    padding: 0 40px;
+  }
+}

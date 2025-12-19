@@ -1,0 +1,263 @@
+:root {
+  --sidebar-bg: #1e293b;
+  --sidebar-hover: #334155;
+  --accent-blue: #3b82f6;
+  --body-bg: #f8fafc;
+  --text-main: #1e293b;
+}
+
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--body-bg);
+  font-family: 'Inter', sans-serif;
+}
+
+/* Sidebar Styling */
+.admin-sidebar {
+  width: 260px;
+  background-color: var(--sidebar-bg);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 100vh;
+  box-shadow: 4px 0 10px rgba(0,0,0,0.1);
+}
+
+.sidebar-header {
+  padding: 30px 20px;
+  text-align: center;
+  border-bottom: 1px solid #334155;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 20px 10px;
+}
+
+.sidebar-nav button {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  background: none;
+  border: none;
+  color: #94a3b8;
+  text-align: left;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sidebar-nav button i {
+  width: 20px;
+}
+
+.sidebar-nav button:hover {
+  background-color: var(--sidebar-hover);
+  color: white;
+}
+
+.sidebar-nav button.active {
+  background-color: var(--accent-blue);
+  color: white;
+}
+
+.sidebar-footer {
+  padding: 20px;
+  border-top: 1px solid #334155;
+}
+
+/* Main Content Area */
+.admin-main {
+  margin-left: 260px; /* Same as sidebar width */
+  flex: 1;
+  padding: 40px;
+}
+
+.content-header {
+  margin-bottom: 30px;
+}
+
+.content-header h1 {
+  font-size: 28px;
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+.content-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Form & Table Global Styles inside Admin */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+}
+
+button.submit-btn {
+  background-color: var(--accent-blue);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Responsive for tablets */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .admin-sidebar {
+    width: 220px;
+  }
+  .admin-main {
+    margin-left: 220px;
+    padding: 30px;
+  }
+  .sidebar-header {
+    padding: 25px 15px;
+  }
+  .sidebar-nav button {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+  .content-header h1 {
+    font-size: 24px;
+  }
+}
+
+/* Responsive for small devices */
+@media (max-width: 768px) and (min-width: 481px) {
+  .admin-sidebar {
+    width: 200px;
+  }
+  .admin-main {
+    margin-left: 200px;
+    padding: 25px;
+  }
+  .sidebar-header {
+    padding: 20px 12px;
+  }
+  .sidebar-nav button {
+    font-size: 13px;
+    padding: 10px;
+  }
+  .content-header h1 {
+    font-size: 22px;
+  }
+}
+
+/* Responsive for mobile devices */
+@media (max-width: 480px) {
+
+  .admin-layout {
+    flex-direction: column;
+  }
+
+  .admin-sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .sidebar-header {
+    display: none;
+  }
+
+  .sidebar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .sidebar-nav button {
+    font-size: 12px;
+    padding: 10px;
+    justify-content: center;
+  }
+
+  .admin-main {
+    margin-left: 0;
+    padding: 16px;
+  }
+
+  .content-header h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+
+/* Responsive for very large screens */
+@media (min-width: 1440px) {
+  .admin-sidebar {
+    width: 280px;
+  }
+  .admin-main {
+    margin-left: 280px;
+    padding: 50px;
+  }
+  .sidebar-nav button {
+    font-size: 16px;
+    padding: 14px 18px;
+  }
+  .content-header h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  /* Shrink entire navbar height */
+  .admin-sidebar {
+    height: auto;
+    padding: 0;
+  }
+
+  /* Shrink header */
+  .sidebar-header {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  /* Make nav horizontal & compact */
+  .sidebar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 6px 4px;
+  }
+
+  /* Shrink buttons */
+  .sidebar-nav button {
+    padding: 6px 8px;
+    font-size: 11px;
+    margin-bottom: 0;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .sidebar-nav button i {
+    font-size: 14px;
+  }
+
+  /* Shrink footer */
+  .sidebar-footer {
+    padding: 6px;
+    text-align: center;
+  }
+}

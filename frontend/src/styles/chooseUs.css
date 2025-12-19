@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+.chooseus-section {
+  width: 100%;
+  padding: 100px 5%;
+  background-color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+.chooseus-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Geometric Decorators */
+.bg-decorator {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 0;
+}
+.circle-blue { width: 20px; height: 20px; background: #3b82f6; top: 10%; right: 45%; }
+.circle-orange { width: 15px; height: 15px; background: #f97316; top: 50%; right: 50%; }
+
+/* Grid Layout */
+.chooseus-content-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 120px;
+}
+
+.chooseus-text-content {
+  flex: 1;
+  max-width: 450px;
+}
+
+.main-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.main-desc {
+  font-size: 18px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* Image Orbit System */
+.chooseus-image-wrapper {
+  flex: 1;
+  position: relative;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.orbit-svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-15deg);
+}
+
+.img-container {
+  position: absolute;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #fff;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-container.large {
+  width: 320px;
+  height: 320px;
+  z-index: 3;
+}
+
+.img-container.medium.top-right {
+  width: 180px;
+  height: 180px;
+  top: 10px;
+  right: 20px;
+  z-index: 2;
+}
+
+.img-container.medium.bottom-right {
+  width: 160px;
+  height: 160px;
+  bottom: 40px;
+  right: 0px;
+  z-index: 2;
+}
+
+/* Bottom Cards Section */
+.chooseus-bottom {
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 32px;
+  color: #1e3a8a;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.section-subtitle::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: #2563eb;
+}
+
+.chooseus-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.chooseus-card {
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.icon-box {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  color: #2563eb;
+  font-size: 24px;
+}
+
+.chooseus-card h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 15px;
+}
+
+.chooseus-card p {
+  font-size: 15px;
+  color: #64748b;
+  line-height: 1.7;
+}
+
+@media (max-width: 968px) {
+  .chooseus-content-grid { flex-direction: column; text-align: center; }
+  .chooseus-cards { grid-template-columns: 1fr; }
+  .chooseus-text-content { margin-bottom: 50px; }
+}
+
+/* Responsive for tablets */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .chooseus-section { padding: 80px 5%; }
+  .main-title { font-size: 36px; }
+  .main-desc { font-size: 17px; }
+  .img-container.large { width: 280px; height: 280px; }
+  .img-container.medium.top-right { width: 160px; height: 160px; top: 5px; right: 15px; }
+  .img-container.medium.bottom-right { width: 140px; height: 140px; bottom: 30px; right: 0px; }
+  .chooseus-cards { gap: 25px; }
+}
+
+/* Responsive for small devices */
+@media (max-width: 768px) and (min-width: 481px) {
+  .chooseus-section { padding: 60px 5%; }
+  .main-title { font-size: 32px; }
+  .main-desc { font-size: 16px; }
+  .img-container.large { width: 240px; height: 240px; }
+  .img-container.medium.top-right { width: 140px; height: 140px; top: 0; right: 10px; }
+  .img-container.medium.bottom-right { width: 120px; height: 120px; bottom: 20px; right: 0; }
+  .chooseus-cards { gap: 20px; }
+}
+
+/* Responsive for mobile devices */
+@media (max-width: 480px) {
+  .chooseus-section { padding: 50px 5%; }
+  .chooseus-content-grid { flex-direction: column; text-align: center; }
+  .chooseus-text-content { max-width: 100%; margin-bottom: 40px; }
+  .main-title { font-size: 28px; }
+  .main-desc { font-size: 15px; }
+  .img-container.large { width: 200px; height: 200px; }
+  .img-container.medium.top-right { width: 100px; height: 100px; top: 0; right: 5px; }
+  .img-container.medium.bottom-right { width: 90px; height: 90px; bottom: 10px; right: 0; }
+  .chooseus-cards { grid-template-columns: 1fr; gap: 15px; }
+}
+
+/* Responsive for very large screens */
+@media (min-width: 1440px) {
+  .chooseus-section { padding: 120px 5%; }
+  .main-title { font-size: 48px; }
+  .main-desc { font-size: 20px; }
+  .img-container.large { width: 360px; height: 360px; }
+  .img-container.medium.top-right { width: 200px; height: 200px; top: 15px; right: 25px; }
+  .img-container.medium.bottom-right { width: 180px; height: 180px; bottom: 50px; right: 5px; }
+  .chooseus-cards { gap: 35px; }
+}
+/* FIX image overlap issue on small screens */
+@media (max-width: 768px) {
+  .chooseus-image-wrapper {
+    margin-top: 40px;
+    height: auto;
+  }
+
+  .img-container.large {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .img-container.medium.top-right,
+  .img-container.medium.bottom-right {
+    display: none;
+  }
+
+  .chooseus-content-grid {
+    padding-top: 40px;
+  }
+}
+
+/* Extra safety for very small phones */
+@media (max-width: 480px) {
+  .chooseus-image-wrapper {
+    margin-top: 60px;
+  }
+
+  .main-title {
+    margin-bottom: 15px;
+  }
+
+  .main-desc {
+    margin-bottom: 30px;
+  }
+}
+/* Fix blue dot overlapping text */
+@media (max-width: 1024px) {
+  .circle-blue {
+    top: 5%;
+    right: 10%;
+  }
+}
+
+/* Completely disable decorative dots on mobile */
+@media (max-width: 768px) {
+  .circle-blue,
+  .circle-orange {
+    display: none;
+  }
+}

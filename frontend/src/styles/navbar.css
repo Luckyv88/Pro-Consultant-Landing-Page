@@ -1,0 +1,136 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 48px;              /* reduced side padding */
+  height: 64px;                 /* ✅ professional height */
+  background: #f6f7f9;          /* dull white */
+  color: #111;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+  border-radius: 0 0 10px 10px;  /* soft rounding */
+}
+
+/* Navigation list */
+.navbar ul {
+  display: flex;
+  gap: 22px;                    /* slightly tighter */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Logo */
+.logo-link {
+  color: #1a1a1a;
+  text-decoration: none;
+  font-size: 22px;              /* slightly refined */
+  font-weight: 700;
+}
+
+/* Nav links */
+.navbar .nav-link {
+  color: #444;
+  text-decoration: none;
+  font-size: 15px;              /* clean & readable */
+  font-weight: 600;             /* bold */
+  padding: 6px 10px;            /* reduced height */
+  border-radius: 6px;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+/* Hover highlight */
+.navbar .nav-link:hover {
+  color: #2563eb;
+  background-color: rgba(37, 99, 235, 0.08);
+}
+
+/* Reset body spacing */
+body {
+  margin: 0;
+  padding: 0;
+}
+/* Responsive for laptops & small desktops */
+@media (max-width: 1200px) and (min-width: 1025px) {
+  .navbar {
+    padding: 0 36px;
+  }
+  .logo-link {
+    font-size: 21px;
+  }
+  .navbar .nav-link {
+    font-size: 14.5px;
+  }
+}
+
+/* Responsive for tablets */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .navbar {
+    padding: 0 28px;
+  }
+  .navbar ul {
+    gap: 18px;
+  }
+  .logo-link {
+    font-size: 20px;
+  }
+  .navbar .nav-link {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+}
+
+/* Responsive for small tablets */
+@media (max-width: 768px) and (min-width: 481px) {
+  .navbar {
+    padding: 0 22px;
+    height: 60px;
+  }
+  .navbar ul {
+    gap: 16px;
+  }
+  .logo-link {
+    font-size: 19px;
+  }
+  .navbar .nav-link {
+    font-size: 13.5px;
+    padding: 5px 8px;
+  }
+}
+
+/* Responsive for mobile devices */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0 16px;
+    height: 58px;
+  }
+  .navbar ul {
+    gap: 12px;
+  }
+  .logo-link {
+    font-size: 18px;
+  }
+  .navbar .nav-link {
+    font-size: 13px;
+    padding: 5px 6px;
+  }
+}
+
+/* Responsive for very large screens */
+@media (min-width: 1440px) {
+  .navbar {
+    padding: 0 64px;
+  }
+  .logo-link {
+    font-size: 23px;
+  }
+  .navbar .nav-link {
+    font-size: 16px;
+    padding: 7px 12px;
+  }
+}

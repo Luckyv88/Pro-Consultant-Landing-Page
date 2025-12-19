@@ -1,0 +1,88 @@
+.hero-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.hero-form input {
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+}
+
+.hero-form button {
+  margin-top: 10px;
+  background-color: #f47c3c;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.hero-form button:hover {
+  background-color: #e36a2d;
+}
+
+/* Responsive for tablets */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .hero-form {
+    gap: 12px;
+  }
+  .hero-form input {
+    font-size: 13.5px;
+    padding: 11px;
+  }
+  .hero-form button {
+    font-size: 14.5px;
+    padding: 11px;
+  }
+}
+
+/* Responsive for small tablets */
+@media (max-width: 768px) and (min-width: 481px) {
+  .hero-form {
+    gap: 12px;
+  }
+  .hero-form input {
+    font-size: 13px;
+    padding: 10px;
+  }
+  .hero-form button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+/* Responsive for mobile devices */
+@media (max-width: 480px) {
+  .hero-form {
+    gap: 10px;
+  }
+  .hero-form input {
+    font-size: 13px;
+    padding: 10px;
+  }
+  .hero-form button {
+    font-size: 14px;
+    padding: 11px;
+    margin-top: 8px;
+  }
+}
+
+/* Responsive for very large screens */
+@media (min-width: 1440px) {
+  .hero-form {
+    gap: 16px;
+  }
+  .hero-form input {
+    font-size: 15px;
+    padding: 14px;
+  }
+  .hero-form button {
+    font-size: 16px;
+    padding: 14px;
+  }
+}

@@ -1,0 +1,225 @@
+/* Lock view to prevent horizontal scroll */
+.client-outer-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #ffffff;
+}
+
+.happy-clients-section {
+  padding: 100px 0;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.client-container {
+  max-width: 1200px;
+  width: 90%;
+  text-align: center;
+  z-index: 10;
+}
+
+.happy-clients-title {
+  color: #3b71ca;
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 80px;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+/* Card Row Layout */
+.clients-card-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Individual Testimonial Card */
+.testimonial-card {
+  background: #ffffff;
+  width: 220px;
+  border-radius: 12px;
+  padding: 0 15px 25px 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+  position: relative;
+  margin-top: 40px; /* Space for the overlapping avatar */
+  text-align: center;
+}
+
+/* Floating Avatar with Blue Border */
+.client-avatar-container {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.blue-circle-border {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 3px solid #3b71ca; /* Exact blue border from image */
+  padding: 3px;
+  background: white;
+}
+
+.blue-circle-border img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Card Content Styling */
+.testimonial-body {
+  padding-top: 45px;
+}
+
+.testimonial-text {
+  color: #666666;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  height: 75px;
+  overflow: hidden;
+}
+
+.client-display-name {
+  color: #3b71ca;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.client-display-designation {
+  color: #999999;
+  font-size: 12px;
+}
+
+/* Background Decorative elements - Fixed to avoid overflow */
+.decor-left-curves {
+  position: absolute;
+  top: 0;
+  left: -50px;
+  width: 300px;
+  height: 300px;
+  border: 2px solid rgba(59, 113, 202, 0.1);
+  border-radius: 50%;
+}
+
+.decor-top-dots {
+  position: absolute;
+  top: 20px;
+  right: 15%;
+  width: 100px;
+  height: 100px;
+  background-image: radial-gradient(rgba(59, 113, 202, 0.2) 2px, transparent 2px);
+  background-size: 15px 15px;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .clients-card-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+}
+
+/* Responsive for tablets */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .happy-clients-section {
+    padding: 80px 0;
+  }
+  .happy-clients-title {
+    font-size: 30px;
+    margin-bottom: 60px;
+  }
+  .testimonial-card {
+    width: 200px;
+  }
+  .testimonial-text {
+    font-size: 12.5px;
+    height: 70px;
+  }
+}
+
+/* Responsive for small tablets */
+@media (max-width: 768px) and (min-width: 481px) {
+  .happy-clients-section {
+    padding: 70px 0;
+  }
+  .happy-clients-title {
+    font-size: 28px;
+    margin-bottom: 50px;
+  }
+  .testimonial-card {
+    width: 260px;
+  }
+  .testimonial-text {
+    height: auto;
+  }
+}
+
+/* Responsive for mobile devices */
+@media (max-width: 480px) {
+  .happy-clients-section {
+    padding: 60px 0;
+  }
+  .happy-clients-title {
+    font-size: 24px;
+    margin-bottom: 45px;
+  }
+  .testimonial-card {
+    width: 90%;
+  }
+  .testimonial-text {
+    font-size: 13px;
+    height: auto;
+  }
+  .blue-circle-border {
+    width: 65px;
+    height: 65px;
+  }
+  .decor-left-curves {
+    width: 220px;
+    height: 220px;
+    left: -80px;
+  }
+  .decor-top-dots {
+    width: 80px;
+    height: 80px;
+    right: 10%;
+  }
+}
+
+/* Responsive for very large screens */
+@media (min-width: 1440px) {
+  .happy-clients-section {
+    padding: 120px 0;
+  }
+  .happy-clients-title {
+    font-size: 38px;
+  }
+  .testimonial-card {
+    width: 240px;
+  }
+  .testimonial-text {
+    font-size: 14px;
+  }
+}
