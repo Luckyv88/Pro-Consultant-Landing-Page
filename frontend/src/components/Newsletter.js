@@ -9,7 +9,7 @@ const Newsletter = () => {
     e.preventDefault();
     if (!email) return alert("Please enter an email");
     
-    axios.post('http://localhost:5000/api/subscribers', { email })
+    axios.post('https://pro-consultant-landing-page-backend.onrender.com/api/subscribers', { email })
       .then(() => {
         alert('Subscribed successfully!');
         setEmail('');
@@ -21,7 +21,7 @@ const Newsletter = () => {
     <section className="newsletter-section">
       {/* Background Image Overlay */}
       <div className="newsletter-bg-overlay">
-        <img src="http://localhost:5000/uploads/fotter.jpg" alt="Newsletter Background" />
+        <img src="https://pro-consultant-landing-page-backend.onrender.com/uploads/fotter.jpg" alt="Newsletter Background" />
       </div>
 
       <div className="newsletter-container">
