@@ -4,7 +4,7 @@ const ProjectForm = () => {
   const submitHandler = async (e) => {
     e.preventDefault()
     const data = new FormData(e.target)
-    await axios.post('http://localhost:5000/api/projects', data)
+    await axios.post('https://pro-consultant-landing-page-backend.onrender.com/api/projects', data)
     alert('Project Added')
   }
 
