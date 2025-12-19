@@ -31,7 +31,7 @@ const About = () => {
 
             <div className="side-img-wrapper right-img">
               <div className="img-frame">
-                <img src="https://pro-consultant-landing-page-backend.onrender.com/aboutus3.jpg" alt="Agent" />
+                <img src="https://pro-consultant-landing-page-backend.onrender.com/uploads/aboutus3.jpg" alt="Agent" />
               </div>
               <div className="bracket bracket-blue-top-right"></div>
             </div>
