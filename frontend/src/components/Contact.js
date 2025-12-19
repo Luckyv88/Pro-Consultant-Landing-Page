@@ -7,7 +7,7 @@ const Contact = () => {
 
   const submitHandler = e => {
     e.preventDefault()
-    axios.post('http://localhost:5000/api/contact', form)
+    axios.post('https://pro-consultant-landing-page-backend.onrender.com/api/contact', form)
       .then(() => alert('Submitted'))
   }
 
