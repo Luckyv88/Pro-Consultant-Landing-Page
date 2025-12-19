@@ -5,7 +5,7 @@ const SubscriberList = () => {
   const [subs, setSubs] = useState([])
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/subscribers')
+    axios.get('https://pro-consultant-landing-page-backend.onrender.com/api/subscribers')
       .then(res => setSubs(res.data))
   }, [])
 
