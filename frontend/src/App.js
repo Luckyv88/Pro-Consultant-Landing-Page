@@ -33,7 +33,7 @@ function App() {
           }
         />
 
-        {/* ADMIN DASHBOARD */}
+        {/* ADMIN DASHBOARD use= /#/admindashboard */}
         <Route path="/admindashboard" element={<AdminDashboard />} />
       </Routes>
     </Router>
